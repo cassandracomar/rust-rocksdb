@@ -52,8 +52,7 @@ fn bindgen_rocksdb() {
 fn build_rocksdb() {
     let target = env::var("TARGET").unwrap();
 
-    let mut config = cc::Build::new();
-    config.static_crt(true);
+    let mut config = cc::Build::new().static_crt(true).static_flag(true);
     config.include("rocksdb/include/");
     config.include("rocksdb/");
     config.include("rocksdb/third-party/gtest-1.8.1/fused-src/");
