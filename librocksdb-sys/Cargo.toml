@@ -28,6 +28,6 @@ const-cstr = "0.3"
 uuid = { version = "0.8", features = ["v4"] }
 
 [build-dependencies]
-cc = { version = "^1.0", features = ["parallel"] }
-bindgen = "0.55"
+cc = { version = "^1.0", features = ["parallel", "static"] }
+bindgen = { version = "0.55", features = ["static"] }
 glob = "0.3"
