@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+#![feature(static_nobundle)]
 #![allow(clippy::all)]
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
