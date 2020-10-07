@@ -325,7 +325,7 @@ fn cxx_standard() -> String {
 }
 
 fn main() {
-    println!("cargo:rustc-link-lib=static=stdc++");
+    println!("cargo:rustc-link-lib=static-nobundle=stdc++");
     bindgen_rocksdb();
 
     if !try_to_find_and_link_lib("ROCKSDB") {
@@ -338,7 +338,7 @@ fn main() {
         if target.contains("apple") || target.contains("freebsd") || target.contains("openbsd") {
             println!("cargo:rustc-link-lib=dylib=c++");
         } else if target.contains("linux") {
-            println!("cargo:rustc-link-lib=static=stdc++");
+            println!("cargo:rustc-link-lib=static-nobundle=stdc++");
         }
     }
     if cfg!(feature = "snappy") && !try_to_find_and_link_lib("SNAPPY") {
