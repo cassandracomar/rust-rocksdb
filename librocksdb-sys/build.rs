@@ -325,7 +325,7 @@ fn cxx_standard() -> String {
 }
 
 fn main() {
-    println!("cargo:rustc-link-lib=static-nobundle=stdc++");
+    println!("cargo:rustc-link-lib=static=stdc++");
     bindgen_rocksdb();
 
     if !try_to_find_and_link_lib("ROCKSDB") {
