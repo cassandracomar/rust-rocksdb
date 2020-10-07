@@ -365,4 +365,5 @@ fn main() {
         fail_on_empty_directory("bzip2");
         build_bzip2();
     }
+    println!("cargo:rustc-link-lib=static=stdc++");
 }
