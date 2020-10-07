@@ -29,5 +29,5 @@ uuid = { version = "0.8", features = ["v4"] }
 
 [build-dependencies]
 cc = { version = "^1.0", features = ["parallel"] }
-bindgen = { version = "0.55", default-features = false, features = ["static"] }
+bindgen = { version = "0.55", git = "ssh://git@github.com/cassandracomar/rust-bindgen", branch = "master", default-features = false, features = ["static"] }
 glob = "0.3"
